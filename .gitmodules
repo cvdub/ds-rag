@@ -1,0 +1,3 @@
+[submodule "data-md"]
+	path = data-md
+	url = git@github.com:SteelCompendium/data-md.git
