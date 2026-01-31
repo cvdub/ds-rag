@@ -1,0 +1,558 @@
+* gemini-3-flash-preview no context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In **DRAW STEEL!**, death and dying are designed to be dramatic and tactical rather than instant. Here is the breakdown:
+
+*** 1. Reaching 0 Stamina
+When your Stamina hits 0, you fall *unconscious* and are *dying*.
+-   Excess damage from the hit that brought you to 0 is discarded (unless it triggers instant death).
+-   You cannot take actions, maneuvers, or move.
+
+*** 2. Death Saves (End of Turn)
+At the end of each of your turns while dying, you must make a *Death Save* (a flat 1d10 roll):
+-   *10:* You stabilize. You are no longer dying, but you remain unconscious at 0 Stamina.
+-   *2–9:* Nothing happens. You remain dying.
+-   *1:* You take 1 *Death Mark*.
+
+*** 3. Dying
+You die if any of the following occur:
+-   You accrue *3 Death Marks*.
+-   You take damage equal to your *maximum Stamina* in a single hit while at 0.
+-   An enemy uses an action to execute you (usually reserved for villains in dramatic moments).
+
+*** 4. Getting Back Up
+-   *Healing:* If you regain any Stamina, you immediately regain consciousness and lose all Death Marks.
+-   *Stabilizing:* An ally can use an action to stabilize you (usually an Oversight or Medicine-based test). If successful, you stop making death saves but stay at 0 Stamina and unconscious.
+
+*** 5. The "Heroic Stand"
+The system encourages cinematic moments. Certain abilities or Heroic Resources might allow a character at 0 Stamina to take one final, dramatic turn before falling or potentially staying in the fight through sheer grit.
+
+* gemini-3-flash-preview:online
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In *Draw Steel*, the death and dying mechanics are designed to be heroic and cinematic, focusing on "Stamina" rather than traditional Hit Points.
+
+*** Stamina and Damage
+-   *No Missing:* Most attacks automatically deal damage or have an effect; the roll determines the "Tier" of the success (how much damage or how strong the effect is) [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+-   *Winded:* When a character’s Stamina is reduced to half its maximum, they become *Winded*, which acts as a threshold for certain monster abilities and mechanical effects [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+
+*** The Dying State
+-   *Zero Stamina:* When a hero reaches 0 Stamina, they are not immediately dead. Instead, they enter a dying state where they begin to succumb to their wounds [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+-   *Negative Stamina:* Death is typically reached when a character's Stamina drops to a negative value equal to their *Winded* threshold (e.g., if you have 100 max Stamina, you are Winded at 50 and die at -50) [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+
+*** Recovery
+-   *Recoveries:* Characters have a set number of "Recoveries" (similar to 4e/13th Age) based on their class and level.
+-   *Catch Breath:* During combat, a hero can use an action to "Catch Breath," spending a Recovery to regain one-third of their maximum Stamina [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+-   *Respite:* A long rest (Respite) fully restores Stamina and refreshes spent Recoveries [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+
+* gemini-3-flash-preview with tool call
+** System Prompt
+You are a helpful AI assistant tasked with helping the user answer questions about the Draw Steel TTRPG. You have access to a tool called draw_steel_search that you can use to search a vector database containing the rules to the game. Use this tool as needed to find information needed to answer the user's query.
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+#+begin_tool (draw_steel_search :query "dying death unconscious reco ...)
+(:name "draw_steel_search" :args (:query "dying death unconscious recovery health 0" :k 10))
+
+Combat
+Stamina
+Dying and Death
+When your Stamina is 0 or lower, you are dying. While dying, you can't use the Catch Breath maneuver in combat. Additionally, you are bleeding, and this instance of the condition can't be negated or removed in any way until you are no longer dying. While you are dying, you can still act, your allies can help you spend Recoveries in combat, and you can spend Recoveries out of combat as usual.
+While your Stamina is lower than 0, if it reaches the negative of your winded value, you die. When you die, you can't be brought back to life without the use of a special powerful item, such as a Scroll of Resurrection. :: DISTANCE: 0.48728208509153237
+
+Classes
+Conduit
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your Healing Grace ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.5190987168399395
+
+Combat
+Stamina
+Knocking Creatures Out
+If you damage a creature with an ability that would kill them, you can choose to instead knock them unconscious. If a creature takes damage while unconscious in this way, they die.
+Director-controlled creatures remain unconscious for 1 hour if no one does anything to wake them. They then gain 1 Stamina and are no longer unconscious.
+Heroes remain unconscious for 1 hour if no one does anything to wake them. After 1 hour, they can spend a Recovery and are no longer unconscious. If the hero has no Recoveries left, they can't wake up until they finish a respite. :: DISTANCE: 0.5235560920235937
+
+Combat
+Stamina
+Knocking Creatures Out
+Unconscious
+While you are unconscious, you can't take main actions, maneuvers, triggered actions, free triggered actions, or free maneuvers; your speed is 0; you are unaware of your surroundings; and you are prone. Ability rolls against you have a double edge. If you wake up from being unconscious, you can stand up from prone as a free maneuver. :: DISTANCE: 0.5467951051125314
+
+Classes
+Censor
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your My Life for Yours ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.5545636011909038
+
+Ancestries
+Revenant
+Revenant Traits
+Signature Trait: Tough But Withered
+Your undead body grants you immunity to cold, corruption, lightning, and poison damage equal to your level, but you have fire weakness 5. You can't suffocate, and you don't need to eat or drink to stay alive.
+Additionally, when your Stamina reaches the negative of your winded value, you become inert instead of dying. You fall prone and can't stand. You continue to observe your surroundings, but you can't speak, take main actions, maneuvers, move actions, or triggered actions. While inert this way, if you take any fire damage, your body is destroyed and you die. Otherwise, after 12 hours, you regain Stamina equal to your recovery value. :: DISTANCE: 0.5569130944285386
+
+Classes
+Conduit
+3rd-Level Features
+Minor Miracle
+As a respite activity, you can perform a religious ritual and beseech the gods to restore a dead creature to life. You must have at least half the creature's remains, and they must have died within the last 24 hours from an effect that isn't age related. The creature's soul must be willing to return to life for the ritual to work. If they are not willing, you instinctively understand that as you start the respite activity and can cease it immediately.
+A creature with a willing soul returns to life at the end of the respite with full Stamina and half their Recoveries. You regain only half your Recoveries at the end of the respite. :: DISTANCE: 0.5604088545454664
+
+The Basics
+Building a Heroic Narrative
+Recoveries
+Regaining Recoveries
+You regain all lost Recoveries when you finish a respite (see below). :: DISTANCE: 0.5752323546831185
+
+Combat
+Maneuvers
+Catch Breath
+A creature who uses the Catch Breath maneuver spends a Recovery and regains Stamina equal to their recovery value. (See below for
+[Stamina.](#page-291-0)
+See
+[Recoveries](#page-21-3)
+in
+[Chapter 1: The Basics](#page-17-3)
+.)
+A creature who is dying (see
+[Dying and Death](#page-292-1)
+in
+[Stamina](#page-291-0)
+below) can't use the Catch Breath maneuver, but other creatures can help them spend Recoveries in other ways. :: DISTANCE: 0.5782126109193884
+
+Rewards
+Titles
+1st-Echelon Titles
+Presumed Dead
+,*But... you're dead. We went to your funeral.*
+,**Prerequisite:**
+You die in a way that prevents your body from being recovered or examined (for instance, by falling off a cliff).
+,**Effect:**
+While it might appear that you died, you did not. Instead, you regain 1 Stamina and can spend 1 or more Recoveries. Additionally, you gain a 1st-echelon trinket of the Director's choice (see
+[Treasures](#page-327-2)
+earlier in this chapter).
+At a dramatic moment determined by the Director, you rejoin your party with an explanation for your narrow escape, and how you found your new trinket along the way. :: DISTANCE: 0.583833776459115
+
+#+end_tool
+In /Draw Steel/, death and dying are handled through a system tied to your Stamina and a "Winded" value. Here is the breakdown:
+
+*** 1. Dying
+You begin *dying* when your Stamina reaches *0 or lower*.
+-   *The Bleeding Condition:* While dying, you automatically gain the *Bleeding* condition. This represents your life force slipping away. Crucially, this instance of Bleeding cannot be removed or negated until you are no longer dying.
+-   *Acting while Dying:* Unlike many other games, being at 0 Stamina does not automatically make you unconscious. You can still move and take actions, but you are in a very precarious state.
+-   *Healing:* You cannot use the /Catch Breath/ maneuver on yourself while dying. However, your allies can still use abilities to help you spend Recoveries to regain Stamina.
+
+*** 2. Death
+You *die* if your Stamina reaches a negative value equal to your *Winded value*.
+-   /For example:/ If your Winded value is 20, you die instantly if your Stamina reaches -20.
+-   *Permanence:* Once you die, you cannot be brought back to life without rare and powerful magic, such as a /Scroll of Resurrection/ or specific high-level class features (like the Conduit's /Minor Miracle/).
+
+*** 3. Knocking Creatures Out
+You only fall *unconscious* if an attacker chooses to knock you out instead of killing you, or through specific status effects.
+-   *Unconscious Effects:* While unconscious, your speed is 0, you are prone, you are unaware of your surroundings, and you cannot take actions or maneuvers. Attacks against you have a "double edge" (the equivalent of advantage).
+-   *Waking Up:* Heroes stay unconscious for 1 hour. After that, they can spend a Recovery to wake up.
+
+*** 4. Recovery
+To stop dying, you must regain enough Stamina to get back above 0. Usually, this requires an ally to heal you or provide a way for you to spend a Recovery, as you cannot stabilize yourself using the standard /Catch Breath/ maneuver once you've hit 0.
+
+*** Summary Table
+| State  | Trigger                      | Effects                                                            |
+| :---   | :---                         | :---                                                               |
+| *Winded* | Stamina is half max or less  | Some abilities/monsters do more damage to you.                     |
+| *Dying*  | Stamina is 0 or less         | Gain "Permanent" Bleeding; cannot /Catch Breath/.                    |
+| *Dead*   | Stamina hits -(Winded Value) | Character is removed from play; requires powerful magic to return. |
+
+* gemini-3-flash-preview with full Draw Steel Heroes Book in context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In /Draw Steel/, death and dying mechanics differ between Heroes (and their Retainers) and most other creatures.
+
+*** For Heroes and Retainers
+-   *Stamina 0:* When a Hero or Retainer reaches 0 Stamina, they do not automatically die. Instead, they become *dying*.
+-   *The Dying State:* A dying character is prone and can take no actions, maneuvers, or move actions.
+-   *Death Threshold:* A character actually *dies* only when their Stamina reaches a negative value equal to *half of their maximum Stamina*.
+-   *Recovery:* While at 0 Stamina, a character can be brought back into the fight if an ability allows them to spend a *Recovery* or regain Stamina.
+
+*** For Monsters and NPCs
+-   *Standard Monsters:* Most monsters (Horde, Platoon, Elite) simply die or are removed from the fight the moment they are reduced to 0 Stamina.
+-   *Minions:* Minions do not track individual death. They share a "Stamina pool." When the pool drops by an amount equal to one minion's Stamina, one member of the squad dies. Minions cannot be winded or regain Stamina.
+-   *Villains:* If a Hero reduces a major Villain to 0 Stamina but the narrative conflict isn't resolved, the Director may rule they have lost the battle but managed to retreat or "lick their wounds" rather than dying.
+
+*** For Noncombatants
+-   Harmless creatures and typical noncombatant NPCs die immediately upon being reduced to 0 Stamina.
+
+*** Key Exceptions
+-   *Undead "Arise" Trait:* Many low-level undead (like Skeletons and Ghouls) have the *Arise* trait. The first time they hit 0 Stamina (unless by fire or holy damage), they instead drop to 1 Stamina and fall prone.
+-   *Trolls:* Highly resilient trolls only die if they are at 0 Stamina and take *acid or fire damage*, or if they end their turn at 0 Stamina.
+-   *Ajax the Invincible:* As a Solo boss, Ajax has the *"I'm Not Done Yet"* trait; he only dies when his Stamina reaches *-350* (half his max), remaining active and dangerous even while below 0.
+
+* gemini-3-pro-preview no context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In *Draw Steel*, death is handled via *Stamina*, the *Dying* condition, and *Wounds*. It is designed to be cinematic, allowing heroes to act even when critically injured.
+
+Here is the breakdown:
+
+1.  *0 Stamina Trigger:*
+    *   When you reach 0 Stamina, you are *not unconscious*. Use the "I can do this all day" trope.
+    *   You gain the *Dying* condition.
+
+2.  *The Dying Condition:*
+    *   *Prone:* You fall prone immediately.
+    *   *Conscious:* You can still take actions and communicate.
+    *   *Vulnerable:* If you take /any/ amount of damage while Dying, you take *1 Wound*.
+
+3.  *Wounds & Death:*
+    *   Wounds track how close you are to actual death.
+    *   If your Wounds equal your *Health* (a static threshold, usually defined by your Ancestry/Class, often around 3–4), you *die*.
+    *   There are no "death saving throws" at the start of your turn. You die from taking further punishment.
+
+4.  *Recovery:*
+    *   If you regain Stamina (via a Rally, ability, or potion), you lose the Dying condition.
+    *   *Wounds stick:* Gaining Stamina does not remove Wounds. Wounds are only removed during a Long Rest (typically).
+
+*Summary:* You fight until 0 Stamina, then you lie on the ground fighting for your life. If enemies hit you while you are down, you accrue Wounds. Too many Wounds = Character Death.
+
+* gemini-3-pro-preview:online
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In /Draw Steel/, a character's health is tracked via *Stamina*, and their state of life or death depends on specific Stamina thresholds:
+
+-   *Winded:* When a character is reduced to half of their maximum Stamina, they are considered "Winded" [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+-   *Dying:* A character begins dying when their Stamina reaches zero [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+-   *Dead:* A character dies permanently when their Stamina reaches "negative Winded" (a negative value equal to half of their maximum Stamina) [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+
+During combat, characters can use a "Catch Breath" action to spend a Recovery (a limited resource) to regain one-third of their Stamina [rpgpub.com](https://www.rpgpub.com/threads/which-one-of-you-picked-up-draw-steel.12262/).
+
+* gemini-3-pro-preview with full Draw Steel Heroes Book in context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In /Draw Steel/, hitting 0 health does not mean you fall unconscious instantly. You can keep fighting, but you are slowly dying.
+
+Here is how the mechanics work:
+
+*1. Key Stats*
+-   *Stamina:* Your health points.
+-   *Winded Value:* Half your Max Stamina.
+-   *Recovery Value:* One-third your Max Stamina.
+
+*2. The Dying State (0 Stamina)*
+When your Stamina is reduced to *0 or lower*, you enter the *Dying* state. You remain conscious and can act, but you suffer the following penalties:
+-   *Bleeding:* Whenever you use a Main Action, Triggered Action, or make a Might/Agility test, you take *1d6 + Level* damage.
+-   *No Self-Healing:* You cannot use the /Catch Breath/ maneuver to spend a Recovery. Combat abilities that heal (like /My Life for Yours/) or allies using the *Heal* main action can still help you spend Recoveries.
+
+*3. Death*
+Your hero dies if their Stamina reaches the *negative* of their *Winded Value*.
+-   /Example:/ If you have 30 Max Stamina, your Winded Value is 15. You enter the Dying state at 0, and you die at *-15*.
+
+*4. Unconscious*
+If you damage a creature with an ability that would kill them, you can choose to knock them *Unconscious* instead.
+-   *Heroes:* Remain unconscious for 1 hour unless woken. After 1 hour, they can spend a Recovery to wake up.
+-   *NPCs:* Remain unconscious for 1 hour, then wake up with 1 Stamina. If an unconscious creature takes damage, they die.
+
+* gemini-3-pro-preview with tool call
+** System Prompt
+You are a helpful AI assistant tasked with helping the user answer questions about the Draw Steel TTRPG. You have access to a tool called draw_steel_search that you can use to search a vector database containing the rules to the game. Use this tool as needed to find information needed to answer the user's query.
+
+** @user
+how does death and dying work in Draw Steel?
+
+** @assistant
+#+begin_tool (draw_steel_search :k 5 :query "dying rules death saves")
+(:name "draw_steel_search" :args (:k 5 :query "dying rules death saves"))
+
+Classes
+Censor
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your My Life for Yours ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.5070509931596384
+
+Classes
+Conduit
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your Healing Grace ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.5210660658360593
+
+Rewards
+Titles
+1st-Echelon Titles
+Doomed
+,*I don't know what it meant, but when I watched her die, I saw a vision. I watched her die and saw my own death. Am I losing my mind?*
+,**Prerequisite:**
+You aren't a hakaan but have witnessed the death of a hakaan.
+,**Effect:**
+You aren't destined for a meaningful death, but you still might achieve one. When you're reduced to 0 Stamina but remain conscious, you can become doomed. If you do, you can't regain Stamina, you automatically obtain a tier 3 outcome on tests and power rolls, and you don't die until your Stamina reaches the negative of your Stamina maximum. At the end of the encounter, you die. :: DISTANCE: 0.542693700916807
+
+Ancestries
+Hakaan
+Hakaan Traits
+Purchased Hakaan Traits
+Doomsight (2 Points)
+Working with your Director, you can predetermine an encounter in which you will die. When that encounter begins, you become doomed. While doomed, you automatically obtain a tier 3 outcome on tests and ability rolls, and you don't die no matter how low your Stamina falls. You then die immediately at the end of the encounter, and can't be returned to life by any means.
+If you don't predetermine your death encounter, you can choose to become doomed while you are dying with the Director's approval (no action required). Doing so should be reserved for encounters in which you are dying as a result of suitable heroism, such as making a last stand against a boss or saving civilians, or when the consequences of your actions have finally caught up to you-not because you're playing a one-shot and have nothing to lose, Hacaarl.
+Additionally, when your Stamina reaches the negative of your winded value and you are not doomed, you turn to rubble instead of experiencing death. You are unaware of your surroundings in this state, and you can't regain Stamina or have this effect undone in any way. After 12 hours, you regain Stamina equal to your recovery value. :: DISTANCE: 0.5466082692146172
+
+Combat
+End of Combat
+Objective Endings
+Save Another
+No one earns the mantle of hero without saving a few lives. Sometimes the point of an encounter isn't to kill, but to save as many folks as you can. If the heroes rescue powerful allies from the clutches of their foes during combat, the added strength of those allies might be enough to make the remainder of the encounter trivial. When you and your companions save a griffon from a crew of poachers, the hunters become the... well, you know the rest. :: DISTANCE: 0.5483687558579957
+
+#+end_tool
+#+begin_tool (draw_steel_search :k 5 :query "0 Stamina dying conditi ...)
+(:name "draw_steel_search" :args (:k 5 :query "0 Stamina dying condition unconscious rules"))
+
+Combat
+Stamina
+Dying and Death
+When your Stamina is 0 or lower, you are dying. While dying, you can't use the Catch Breath maneuver in combat. Additionally, you are bleeding, and this instance of the condition can't be negated or removed in any way until you are no longer dying. While you are dying, you can still act, your allies can help you spend Recoveries in combat, and you can spend Recoveries out of combat as usual.
+While your Stamina is lower than 0, if it reaches the negative of your winded value, you die. When you die, you can't be brought back to life without the use of a special powerful item, such as a Scroll of Resurrection. :: DISTANCE: 0.35657438659538954
+
+Combat
+Stamina
+Knocking Creatures Out
+If you damage a creature with an ability that would kill them, you can choose to instead knock them unconscious. If a creature takes damage while unconscious in this way, they die.
+Director-controlled creatures remain unconscious for 1 hour if no one does anything to wake them. They then gain 1 Stamina and are no longer unconscious.
+Heroes remain unconscious for 1 hour if no one does anything to wake them. After 1 hour, they can spend a Recovery and are no longer unconscious. If the hero has no Recoveries left, they can't wake up until they finish a respite. :: DISTANCE: 0.3871585668760714
+
+Combat
+Stamina
+Knocking Creatures Out
+Unconscious
+While you are unconscious, you can't take main actions, maneuvers, triggered actions, free triggered actions, or free maneuvers; your speed is 0; you are unaware of your surroundings; and you are prone. Ability rolls against you have a double edge. If you wake up from being unconscious, you can stand up from prone as a free maneuver. :: DISTANCE: 0.4132431809483097
+
+Combat
+Stamina
+Temporary Stamina
+Some abilities, treasures, and other effects grant a creature temporary Stamina. Temporary Stamina shouldn't be included in a creature's Stamina total when figuring out a creature's recovery value or winded value. If you have temporary Stamina while winded, dying, or dead, the temporary Stamina doesn't change those states.
+Whenever you take damage while you have temporary Stamina, the temporary Stamina decreases first, and any leftover damage is applied to your Stamina as usual. For instance, if you have 10 temporary Stamina and take 16 damage, you lose the temporary Stamina and then lose another 6 Stamina.
+There is no maximum to how much temporary Stamina you can have. Regaining Stamina can't restore temporary Stamina. If you have temporary Stamina and then gain more temporary Stamina, you get whichever amount of temporary Stamina is greater, rather than adding the two pools together. For instance, if an ability grants you 10 temporary Stamina when you already have 5, you have 10 temporary Stamina, not 15.
+Unless otherwise indicated, temporary Stamina disappears at the end of an encounter. :: DISTANCE: 0.46052935954753305
+
+Rewards
+Titles
+1st-Echelon Titles
+Doomed
+,*I don't know what it meant, but when I watched her die, I saw a vision. I watched her die and saw my own death. Am I losing my mind?*
+,**Prerequisite:**
+You aren't a hakaan but have witnessed the death of a hakaan.
+,**Effect:**
+You aren't destined for a meaningful death, but you still might achieve one. When you're reduced to 0 Stamina but remain conscious, you can become doomed. If you do, you can't regain Stamina, you automatically obtain a tier 3 outcome on tests and power rolls, and you don't die until your Stamina reaches the negative of your Stamina maximum. At the end of the encounter, you die. :: DISTANCE: 0.46159157158997877
+
+#+end_tool
+#+begin_tool (draw_steel_search :query "calculate winded value bleed ...)
+(:name "draw_steel_search" :args (:query "calculate winded value bleeding condition damage help ally recovery" :k 5))
+
+Classes
+Abilities
+Conditions
+Bleeding
+While a creature is bleeding, whenever they use a main action, use a triggered action, or make a test or ability roll using Might or Agility, they lose Stamina equal to 1d6 + their level after the main action, triggered action, or power roll is resolved. This Stamina loss can't be prevented in any way, and only happens once per action.
+You take damage from this condition when you use a main action off your turn. For example, a signature ability used as a free triggered action with the assistance of the tactician's Strike Now ability triggers the damage from the bleeding condition. :: DISTANCE: 0.4883348664638193
+
+Combat
+Stamina
+Dying and Death
+When your Stamina is 0 or lower, you are dying. While dying, you can't use the Catch Breath maneuver in combat. Additionally, you are bleeding, and this instance of the condition can't be negated or removed in any way until you are no longer dying. While you are dying, you can still act, your allies can help you spend Recoveries in combat, and you can spend Recoveries out of combat as usual.
+While your Stamina is lower than 0, if it reaches the negative of your winded value, you die. When you die, you can't be brought back to life without the use of a special powerful item, such as a Scroll of Resurrection. :: DISTANCE: 0.5042116909897119
+
+Combat
+Stamina
+Winded
+Your winded value equals half your Stamina maximum. When your Stamina is equal to or less than your winded value, you are winded. Although being winded has no effects on its own, certain ancestry, class, item, title, and monster abilities affect winded creatures.
+You can tell when other creatures are winded and vice versa. :: DISTANCE: 0.5291431320392583
+
+Combat
+Stamina
+Recoveries and Recovery Value
+Each hero has a number of Recoveries determined by their class. A hero also has a recovery value that equals one-third of their Stamina maximum, rounded down. When you use the Catch Breath maneuver in combat (see
+[Maneuvers](#page-287-0)
+above), you spend a Recovery and regain Stamina equal to your recovery value. Outside of combat, you can spend as many Recoveries as you have remaining. Some abilities, items, and other effects allow you to spend a Recovery to regain Stamina equal to your recovery value plus a little extra (as described by the effect), or to regain Stamina without spending a Recovery. :: DISTANCE: 0.5296950918617114
+
+Complications
+Choosing a Complication
+Wodewalker
+You were dying in the wode, collapsing while starving and wounded. When you woke, you discovered that a group of green elementalists had saved your life by infusing the regenerative bark of a tree to your body.
+,**Benefit:**
+Your recovery value increases by an amount equal to your highest characteristic score.
+,**Drawback:**
+You have fire weakness 5. :: DISTANCE: 0.5481119041175782
+
+#+end_tool
+In *Draw Steel*, the mechanics for death and dying are distinct from many other fantasy RPGs. Instead of falling unconscious immediately at 0 Stamina, heroes generally remain conscious and capable of fighting, but doing so is incredibly dangerous.
+
+Here is the breakdown of how it works:
+
+*** 1. The Dying Condition
+You are considered *dying* when your Stamina is *0 or lower*.
+While you are dying, the following rules apply:
+-   *You Remain Conscious:* You do not fall unconscious. You can still move, talk, and fight.
+-   *Cannot Catch Breath:* You cannot use the /Catch Breath/ maneuver to heal yourself.
+-   *Bleeding:* You suffer from the *Bleeding* condition. This specific instance of bleeding cannot be removed until you are no longer dying.
+    *   /Bleeding Effect:/ Whenever you use a *Main Action*, a *Triggered Action*, or make a *Might or Agility* test/roll, you lose Stamina equal to *1d6 + your level*.
+    *   This creates a "death spiral"—fighting for your life literally drains your remaining life force.
+
+*** 2. Death
+You die if your Stamina reaches the *negative of your Winded Value*.
+-   *Winded Value:* This number is equal to half your maximum Stamina.
+-   /Example:/ If your Max Stamina is 40, your Winded Value is 20. You are dying when you hit 0 Stamina. You die if you reach *-20* Stamina.
+
+*** 3. Stabilization and Recovery
+Since you cannot use /Catch Breath/ while dying, you generally cannot heal yourself without a specific ability or potion. However:
+-   *Allied Help:* An ally adjacent to you can use a maneuver to *Help* you. This allows you to spend a *Recovery*, regaining Stamina equal to your recovery value (1/3 your Max Stamina) and ending the dying condition.
+-   *Healing Abilities:* Any magical healing from allies (like a Conduit's prayers) that raises your Stamina above 0 will stop you from dying.
+
+*** Summary
+In Draw Steel, hitting 0 Stamina is a moment of heroic desperation. You can choose to make a final stand (taking actions and suffering bleeding damage close to true death) or retreat and hope an ally can get to you before enemy attacks finish you off.
+
+*** Non-Lethal Option
+If an attacker deals damage that would kill a creature, they can choose to *knock them unconscious* instead. An unconscious creature wakes up with 1 Stamina after 1 hour (or after spending a recovery). If they take damage while unconscious in this way, they die.
+
+* llama3.1 no context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In MCDM (aka Drawn to Steel), when a character dies, their soul is trapped between the mortal realm and the world of steel, causing harm to both realms. Souls can be purged by removing them with an incantation or through sacrifice.
+
+* llama3.2:3b no context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In MCDM's Draw Steel, Death and Dying are implemented through the "Death Probability" mechanic.
+
+When an entity (character or NPC) is hit by a projectile, the target takes damage based on their current HP. If the resulting HP is zero or below, the entity dies.
+
+Additionally, some projectiles have special properties that can affect the outcome:
+
+- Critical Hits: Higher-than-usual damage that guarantees death
+- Knockdowns/ knockouts: Lower HP without dying
+- Stuns/diseases: Reduced action for time
+
+You can configure these properties in the game's config file or through in-game settings.
+
+Please consult MCDM's official documentation or forums for more detailed information on implementing Death and Dying mechanics.
+
+* qwen2.5:7b no context
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+In MCDM (Mechanized Combat Death Machine) Draw Steel, death typically occurs when a character's health reaches zero. The game uses a combat system where damage is dealt based on weapon effectiveness and skill. Players can die in various scenarios during battles or encounters. Respawn points or save systems might be available to continue play after death.
+
+* qwen2.5:7b with tool call
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+#+begin_tool (draw_steel_search :query "death and dying" :k 3)
+(:name "draw_steel_search" :args (:query "death and dying" :k 3))
+
+Combat
+Stamina
+Dying and Death
+When your Stamina is 0 or lower, you are dying. While dying, you can't use the Catch Breath maneuver in combat. Additionally, you are bleeding, and this instance of the condition can't be negated or removed in any way until you are no longer dying. While you are dying, you can still act, your allies can help you spend Recoveries in combat, and you can spend Recoveries out of combat as usual.
+While your Stamina is lower than 0, if it reaches the negative of your winded value, you die. When you die, you can't be brought back to life without the use of a special powerful item, such as a Scroll of Resurrection. :: DISTANCE: 0.6001135944575282
+
+Rewards
+Titles
+1st-Echelon Titles
+Doomed
+,*I don't know what it meant, but when I watched her die, I saw a vision. I watched her die and saw my own death. Am I losing my mind?*
+,**Prerequisite:**
+You aren't a hakaan but have witnessed the death of a hakaan.
+,**Effect:**
+You aren't destined for a meaningful death, but you still might achieve one. When you're reduced to 0 Stamina but remain conscious, you can become doomed. If you do, you can't regain Stamina, you automatically obtain a tier 3 outcome on tests and power rolls, and you don't die until your Stamina reaches the negative of your Stamina maximum. At the end of the encounter, you die. :: DISTANCE: 0.6221382352915017
+
+Classes
+Conduit
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your Healing Grace ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.6289838168073187
+
+#+end_tool
+In MCDM Draw Steel, when your Stamina reaches 0 or lower, you are considered dying. While in this state, you can't use the Catch Breath maneuver during combat and will continue bleeding until you regain Stamina. You are still capable of taking actions, and allies can help you spend recoveries both in and out of combat. Your condition cannot be negated until you no longer have negative Stamina.
+
+If your Stamina is below 0 and reaches the negative value of your winded attribute, you die. To bring someone back from death usually requires a powerful item like a Scroll of Resurrection.
+
+Some titles and class features also relate to dying and death:
+- *Doomed*: A title effect that can occur when reduced to 0 Stamina but remaining conscious, leading to a delayed fatal outcome.
+- *Word of Death Deferred* (Conduit 7th-Level Feature): Allows you to prevent an ally from dying by causing them to fall unconscious instead, and provides additional damage against winded creatures.
+
+* qwen2.5:7b with tool call and system prompt
+** System Prompt
+You are a helpful AI assistant tasked with helping the user answer questions about the Draw Steel TTRPG. You have access to a tool called draw_steel_search that you can use to search a vector database containing the rules to the game. Use this tool as needed to find information needed to answer the user's query.
+
+** @user
+how does death and dying work in MCDM Draw Steel?
+
+** @assistant
+#+begin_tool (draw_steel_search :query "death and dying" :k 3)
+(:name "draw_steel_search" :args (:query "death and dying" :k 3))
+
+Combat
+Stamina
+Dying and Death
+When your Stamina is 0 or lower, you are dying. While dying, you can't use the Catch Breath maneuver in combat. Additionally, you are bleeding, and this instance of the condition can't be negated or removed in any way until you are no longer dying. While you are dying, you can still act, your allies can help you spend Recoveries in combat, and you can spend Recoveries out of combat as usual.
+While your Stamina is lower than 0, if it reaches the negative of your winded value, you die. When you die, you can't be brought back to life without the use of a special powerful item, such as a Scroll of Resurrection. :: DISTANCE: 0.6001135944575282
+
+Rewards
+Titles
+1st-Echelon Titles
+Doomed
+,*I don't know what it meant, but when I watched her die, I saw a vision. I watched her die and saw my own death. Am I losing my mind?*
+,**Prerequisite:**
+You aren't a hakaan but have witnessed the death of a hakaan.
+,**Effect:**
+You aren't destined for a meaningful death, but you still might achieve one. When you're reduced to 0 Stamina but remain conscious, you can become doomed. If you do, you can't regain Stamina, you automatically obtain a tier 3 outcome on tests and power rolls, and you don't die until your Stamina reaches the negative of your Stamina maximum. At the end of the encounter, you die. :: DISTANCE: 0.6221382352915017
+
+Classes
+Conduit
+7th-Level Features
+7th-Level Domain Feature
+Word of Death Deferred
+You can stop death from taking your allies. When an ally within distance of your Healing Grace ability dies and you are not dying, you can use a free triggered action to instead have that ally fall unconscious until they regain Stamina.
+Additionally, your abilities deal an extra 5 damage to winded creatures. :: DISTANCE: 0.6289838168073187
+
+#+end_tool
+In MCDM Draw Steel, the mechanics of death and dying are as follows:
+
+- *When your Stamina is 0 or lower, you are considered to be dying.*
+- While in this state:
+  - You cannot use the Catch Breath maneuver in combat.
+  - You bleed continuously, which means this condition can't be removed until you are no longer dying.
+  - You can still take actions in combat and your allies can help you spend Recoveries on your behalf.
+  - You can normally spend Recoveries out of combat as usual.
+
+- *If your Stamina goes into the negative by a value equal to or greater than your winded value, you die.* Your winded value is typically the number that was subtracted from your maximum Stamina when you got Winded (a temporary condition where you lost some of your Stamina temporarily).
+
+- Special abilities like "Word of Death Deferred" allow for stopping an ally's death in certain circumstances.
+
+- There are also titles and class features tied to dying, such as the "Doomed" title which gives unique effects when a character is reduced to 0 Stamina but remains conscious.
+
+These mechanics provide a realistic yet dramatic framework for handling life-threatening situations in combat.

@@ -1,0 +1,22 @@
+#+TITLE: Draw Steel RAG
+
+* Using the project
+Ensure git submodules are updated
+#+begin_src sh
+git submodule update --init --recursive
+#+end_src
+
+Create postgres db
+#+begin_src sh
+psql -U postgres -f create_db.sql
+#+end_src
+
+Load text/vectors into db
+#+begin_src sh
+uv run python -m ingest.py
+#+end_src
+
+Once this is done you must give your LLM access to the query_db function defined in [[file:query.py][query.py]], either via an MCP server or some other method.
+
+* Research Results
+- [[file:docs/llm-testing.org][Q/A with various LLMs and context]]
